@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Virtual Therapist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI Driven Virtual Therapist</h1>
+        <p>Your mental health companion</p>
+    </header>
+
+    <main>
+        <section id="questionnaire">
+            <h2>Health Evaluation</h2>
+            <form id="healthForm">
+                <div>
+                    <label>How often do you feel anxious?</label><br>
+                    <input type="radio" id="never" name="anxietyFrequency" value="Never" required>
+                    <label for="never">Never</label><br>
+                    <input type="radio" id="sometimes" name="anxietyFrequency" value="Sometimes">
+                    <label for="sometimes">Sometimes</label><br>
+                    <input type="radio" id="often" name="anxietyFrequency" value="Often">
+                    <label for="often">Often</label><br>
+                    <input type="radio" id="always" name="anxietyFrequency" value="Always">
+                    <label for="always">Always</label>
+                </div>
+
+                <div>
+                    <label>Rate your anxiety level (1-10):</label>
+                    <input type="number" id="anxietyLevel" name="anxietyLevel" min="1" max="10" required>
+                </div>
+
+                <div>
+                    <label>Do you have any phobias? (yes/no):</label>
+                    <input type="text" id="phobia" name="phobia" required>
+                </div>
+
+                <div>
+                    <label>Have you experienced PTSD symptoms? (yes/no):</label>
+                    <input type="text" id="ptsd" name="ptsd" required>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="chatbot">
+            <h2>Live Chat</h2>
+            <div id="chatbox">
+                <div id="messages"></div>
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendBtn">Send</button>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>Recommended Exercises</h2>
+            <div id="exerciseList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AI Virtual Therapist</p>
+    </footer>
+
+    <!-- Modal for Report Submission -->
+    <div id="reportModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Report</h2>
+            <p id="reportContent"></p>
+            <button id="confirmSubmit">Submit Report</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
